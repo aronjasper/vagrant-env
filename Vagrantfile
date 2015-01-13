@@ -80,6 +80,9 @@ Vagrant.configure(2) do |config|
   # Sinatra Port
   config.vm.network :forwarded_port, host: 4567, guest: 4567
 
+  # Flask Port
+  config.vm.network :forwarded_port, host: 5000, guest: 5000
+
   # Shares the app folder
   config.vm.synced_folder "apps", "/home/vagrant/apps/"
 end
